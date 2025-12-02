@@ -8,14 +8,14 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: white; /* Sfondo bianco */
+      background-color: white;
       text-align: center;
       padding: 2rem;
-      color: black; /* Testo nero leggibile */
+      color: black;
     }
     .logo {
-      max-width: 200px; /* Logo più grande */
-      border-radius: 0; /* Logo quadrato */
+      max-width: 200px;
+      border-radius: 0;
       margin: 0 auto 2rem;
       display: block;
     }
@@ -33,7 +33,7 @@
       text-decoration: none;
       color: black;
       font-weight: bold;
-      transition: transform 0.2s ease, background 0.2s ease;
+      transition: transform 0.2s ease;
       cursor: pointer;
     }
     .link-button:hover {
@@ -51,7 +51,10 @@
   <img src="logo.png" alt="Logo Salumeria Monte Sant'Angelo" class="logo" />
 
   <!-- Bottone Menù -->
-  <a class="link-button" href="https://www.canva.com/design/DAGzEFBv-SE/lW5JSJbHKfxkiAg_KH3LKw/view?utm_content=DAGzEFBv-SE&utm_campaign=designshare&utm_medium=link2         	  	 	&utm_source=uniquelinks&utlId=h748e1afb72" target="_blank">
+  <!--https://www.canva.com/design/DAGzEFBv-SE/lW5JSJbHKfxkiAg_KH3LKw/view?utm_content=DAGzEFBv-SE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h748e1afb72 -->
+  <a class="link-button"
+     href="https://raw.githubusercontent.com/Marco71915/Salumeria-Monte-Sant-Angelo-Castrovillari/main/menuSalumeriaMonteSantangelo.pdf"
+     target="_blank">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Menu" />
     Catalogo Prodotti
   </a>
@@ -68,7 +71,7 @@
     Seguici su Instagram
   </div>
 
-  <!-- Bottone Facebook (link diretto al profilo web) -->
+  <!-- Bottone Facebook -->
   <a class="link-button" href="https://www.facebook.com/lidia.piazza" target="_blank">
     <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
     Seguici su Facebook
@@ -76,15 +79,17 @@
 
   <script>
     document.getElementById('instagramButton').addEventListener('click', function () {
-      openAppOrWeb('instagram://user?username=salumeriamontesantangelo', 'https://www.instagram.com/salumeriamontesantangelo/');
+      openAppOrWeb(
+        'instagram://user?username=salumeriamontesantangelo',
+        'https://www.instagram.com/salumeriamontesantangelo/'
+      );
     });
 
-    // Funzione generica per tentare apertura app + fallback web
     function openAppOrWeb(appUrl, webUrl) {
       const start = Date.now();
       window.location = appUrl;
 
-      setTimeout(function() {
+      setTimeout(function () {
         if (Date.now() - start < 1500) {
           window.open(webUrl, '_blank');
         }
