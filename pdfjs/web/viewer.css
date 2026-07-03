@@ -7498,3 +7498,15 @@ dialog :link{
 .annotationEditorLayer {
   pointer-events: none !important;
 }
+
+#toolbarContainer {
+    display: none !important;
+}
+
+#sidebarContainer {
+    display: none !important;
+}
+
+#outerContainer {
+    top: 0 !important;
+}
