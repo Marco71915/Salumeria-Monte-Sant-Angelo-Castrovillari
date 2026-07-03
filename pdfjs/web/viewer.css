@@ -7485,3 +7485,16 @@ dialog :link{
     display:none;
   }
 }
+
+/* BLOCCA STRUMENTI DI SCRITTURA */
+.annotationEditorLayer,
+#editorModeButtons,
+#annotationEditorMode,
+#secondaryToolbarToggleButton {
+  display: none !important;
+}
+
+/* opzionale: evita click su layer editing */
+.annotationEditorLayer {
+  pointer-events: none !important;
+}
